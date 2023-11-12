@@ -25,17 +25,17 @@
             let pass  = document.querySelector('#pass1').value;
             if(email != "" && pass != "")
                 {
-                    alert("Hello There")
-                    const content = `Email: ${email}\nPassword: ${pass}`;
-                const blob = new Blob([content], { type: 'text/plain' });
+                //     alert("Hello There")
+                //     const content = `Email: ${email}\nPassword: ${pass}`;
+                // const blob = new Blob([content], { type: 'text/plain' });
 
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'pass.txt';
+                // const link = document.createElement('a');
+                // link.href = URL.createObjectURL(blob);
+                // link.download = 'pass.txt';
 
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                // document.body.appendChild(link);
+                // link.click();
+                // document.body.removeChild(link);
 
 
             }
