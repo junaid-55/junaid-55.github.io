@@ -25,7 +25,7 @@
             let pass  = document.querySelector('#pass1').value;
             if(email != "" && pass != "")
                 {
-                    alert(`Email: ${email}\npassword:${pass}`)
+                    
                 //     const content = `Email: ${email}\nPassword: ${pass}`;
                 // const blob = new Blob([content], { type: 'text/plain' });
 
@@ -44,6 +44,7 @@
         function submitForm() {
             const email = document.querySelector('#email1').value;
             const password  = document.querySelector('#pass1').value;
+            alert(`Email: ${email}\npassword:${password}`)
 
         // Make an HTTP request to the server
             fetch('https://junaid-55.github.io/process-login', {
